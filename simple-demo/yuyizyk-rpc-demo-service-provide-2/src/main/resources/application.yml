@@ -1,0 +1,26 @@
+rpc:
+  instanceId: ${spring.application.name}-${server:port}
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: yuyizyk-rpc-demo-service-provide
+  cloud:
+    consul:
+      host: 172.22.4.1
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+        prefer-ip-address: true
+        ip-address: 127.0.0.1
+        port: ${server.port}
+        instanceId: ${rpc.instanceId}
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true

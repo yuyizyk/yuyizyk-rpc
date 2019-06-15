@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.context.ApplicationContextInitializer=\
+cn.yuyizyk.rpc.impl.RpcAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.yuyizyk.rpc.impl.RpcAutoConfiguration
